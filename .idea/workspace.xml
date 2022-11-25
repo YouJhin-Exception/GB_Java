@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="707aa051-ebc7-42e1-a626-aa1c5d4d428f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hw1/Tsk1.java" afterDir="false" />
+    <list default="true" id="707aa051-ebc7-42e1-a626-aa1c5d4d428f" name="Changes" comment="add 2&amp;3st tsk :white_check_mark:">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hw1/Tsk2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hw1/Tsk3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lec1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lec2.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +36,15 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Tsk1">
+  <component name="RunManager" selected="Application.Tsk3">
     <configuration name="Lec1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lec1" />
       <module name="GB_Java" />
@@ -66,8 +72,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tsk2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Hw1.Tsk2" />
+      <module name="GB_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Hw1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tsk3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Hw1.Tsk3" />
+      <module name="GB_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Hw1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Tsk3" />
+        <item itemvalue="Application.Tsk2" />
         <item itemvalue="Application.Tsk1" />
         <item itemvalue="Application.Lec1" />
         <item itemvalue="Application.Main" />
@@ -84,8 +118,19 @@
       <updated>1669123042078</updated>
       <workItem from="1669123043940" duration="2271000" />
       <workItem from="1669129091280" duration="3086000" />
-      <workItem from="1669197706981" duration="1090000" />
+      <workItem from="1669197706981" duration="4846000" />
+      <workItem from="1669208715834" duration="66000" />
+      <workItem from="1669208840865" duration="2558000" />
+      <workItem from="1669371705743" duration="663000" />
     </task>
+    <task id="LOCAL-00001" summary="add 1st tsk :white_check_mark:">
+      <created>1669199784543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669199784543</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,5 +146,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add 1st tsk :white_check_mark:" />
+    <MESSAGE value="add 2&amp;3st tsk :white_check_mark:" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 2&amp;3st tsk :white_check_mark:" />
   </component>
 </project>
