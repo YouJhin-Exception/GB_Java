@@ -18,8 +18,8 @@ public class Tsk3 {
         System.out.println(someList);
         int min = someList.get(0);
         int max = someList.get(someList.size()-1);
-        System.out.println("Минимальный эллемент -> "+min);
-        System.out.println("Максимальный эллемент -> "+max);
+        System.out.println("Минимальный элемент -> "+min);
+        System.out.println("Максимальный элемент -> "+max);
         System.out.println("Среднее арифметическое -> "+calcAve(someList));
     }
 
