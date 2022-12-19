@@ -5,7 +5,8 @@ package Hw3;
 // Массив из одного элемента считается упорядоченным.
 // Соседние элементы сравниваются и соединяются вместе.
 // Так происходит до тех пор, пока все элементы не будут отсортированы.
-// https://habr.com/ru/post/281675/ - хорошее объяснение + https://ru.wikipedia.org/wiki/Сортировка_слиянием - gjf
+// https://habr.com/ru/post/281675/ - хорошее объяснение + https://ru.wikipedia.org/wiki/Сортировка_слиянием      Сортировка_слиянием - gjf  +
+// и еще одно объяснение - https://www.youtube.com/watch?v=BaY1a0VPIsE   -  https://www.youtube.com/watch?v=Zd-cvD7lpe4
 
 import java.util.Arrays;
 public class Tsk1 {
