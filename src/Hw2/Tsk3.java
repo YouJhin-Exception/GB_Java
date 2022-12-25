@@ -16,7 +16,7 @@ public class Tsk3 {
 
     public static void main(String[] args) {
 
-        try (BufferedReader bfr = new BufferedReader(new FileReader("C:/Users/Len/Desktop/GB_Java/src/Hw2/in.json"))) {
+        try (BufferedReader bfr = new BufferedReader(new FileReader("src/Hw2/in.json"))) {
             StringBuilder stringBuilder = new StringBuilder();
             String strIn;
 
@@ -50,3 +50,46 @@ public class Tsk3 {
 
     }
 }
+/*
+еще одно решение
+
+public class app3 {
+    public static void main(String[] args) {
+        try(FileReader fr =new FileReader("students.json"))
+        {
+            Scanner data =new Scanner(fr);
+            String json = data.nextLine();
+            StringBuilder result = new StringBuilder();
+            String[] pattern ={"Студент "," получил "," по предмету "};
+            List<Integer> starts = new ArrayList<>();
+            List<Integer> ends = new ArrayList<>();
+            List<String> rows = new ArrayList<>();
+            for (int i = 0; i < json.length(); i++) {
+                if (json.charAt(i)=='{') starts.add(i);
+                if (json.charAt(i)=='}') ends.add(i);
+            }
+
+            for (int i = 0; i < starts.size(); i++) {
+                rows.add(json.substring(starts.get(i)+1, ends.get(i)));
+                for (int j = 0; j < starts.size(); j++) {
+                    result.append(pattern[j]);
+                    result.append(sep(rows.get(i),j));
+                }
+                result.append('\n');
+            }
+            System.out.println(result);
+        }
+        catch(IOException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
+    }
+public static String sep(String str,int index)
+{
+    String [] value = str.split(",");
+    String [] subvalue = value[index].split(":");
+    return (subvalue[1].replace("\"",""));
+
+}
+}
+ */
