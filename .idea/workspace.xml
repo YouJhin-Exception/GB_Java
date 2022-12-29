@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="707aa051-ebc7-42e1-a626-aa1c5d4d428f" name="Changes" comment="add hw3 tsks :syringe:">
-      <change afterPath="$PROJECT_DIR$/src/Hw2/Tsk3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hw2/in.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hw2/out.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem3/Ex1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem3/Ex2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem4/Pr1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem4/Pr2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem4/Pr3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem4/Pr4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem4/Tst1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem5/Pr1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem5/Pr2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem5/Pr3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem6/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sem6/Pr1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="707aa051-ebc7-42e1-a626-aa1c5d4d428f" name="Changes" comment="add OOP sem1 :bug:">
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/data/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/data/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/data/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/servise/DataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/servise/StudentServeceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/servise/TeacherServeceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/util/ReaderFromTxt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/util/WriterToTxt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/view/StudentView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/view/TeacherView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OOP/P2/Sem2/view/UserView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -66,13 +63,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Tsk3">
-    <configuration name="Ex2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sem3.Ex2" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOP.Sem1.Main" />
       <module name="GB_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Sem3.*" />
+          <option name="PATTERN" value="OOP.Sem1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -86,19 +83,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Sem6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Pr3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sem5.Pr3" />
-      <module name="GB_Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sem5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,13 +116,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VendingMachine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOP.Sem1.VendingMachine" />
+      <module name="GB_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="OOP.Sem1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.VendingMachine" />
         <item itemvalue="Application.Tsk3" />
         <item itemvalue="Application.Pr1" />
         <item itemvalue="Application.Tst1" />
-        <item itemvalue="Application.Ex2" />
-        <item itemvalue="Application.Pr3" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +168,10 @@
       <workItem from="1671016459783" duration="2896000" />
       <workItem from="1671533701878" duration="4597000" />
       <workItem from="1671620939991" duration="5725000" />
-      <workItem from="1671966215975" duration="7202000" />
+      <workItem from="1671966215975" duration="10797000" />
+      <workItem from="1672053618610" duration="10057000" />
+      <workItem from="1672225441206" duration="247000" />
+      <workItem from="1672309490538" duration="8720000" />
     </task>
     <task id="LOCAL-00001" summary="add 1st tsk :white_check_mark:">
       <created>1669199784543</created>
@@ -201,7 +201,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670329701577</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add some staff">
+      <created>1671976083450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671976083450</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add OOP sem1 :bug:">
+      <created>1672070415628</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672070415628</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +237,9 @@
     <MESSAGE value="add 2&amp;3st tsk :white_check_mark:" />
     <MESSAGE value="add hw2 tsk :pill:" />
     <MESSAGE value="add hw3 tsks :syringe:" />
-    <option name="LAST_COMMIT_MESSAGE" value="add hw3 tsks :syringe:" />
+    <MESSAGE value="add some staff" />
+    <MESSAGE value="add OOP sem1 :bug:" />
+    <option name="LAST_COMMIT_MESSAGE" value="add OOP sem1 :bug:" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
