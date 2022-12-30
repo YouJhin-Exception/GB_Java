@@ -6,7 +6,7 @@ import OOP.P2.Sem2.data.User;
 import java.util.List;
 
 public abstract class UserView {
-    void showTheBest(List<User> userList) {
+    public void showTheBest(List<User> userList) {
         User user = findTheBest(userList);
         System.out.println(user);
 
