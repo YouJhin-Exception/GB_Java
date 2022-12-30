@@ -1,6 +1,4 @@
-package OOP.P2.HW2.DataHW2;
-
-import java.util.Objects;
+package OOP.P2.HW2.dataHW2;
 
 public class Student extends User{
 

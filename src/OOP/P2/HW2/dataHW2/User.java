@@ -1,4 +1,4 @@
-package OOP.P2.HW2.DataHW2;
+package OOP.P2.HW2.dataHW2;
 
 public abstract class User {
     private String fNmane;

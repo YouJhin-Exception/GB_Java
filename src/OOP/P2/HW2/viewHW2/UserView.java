@@ -1,4 +1,4 @@
-package OOP.P2.HW2.ViewHW2;
+package OOP.P2.HW2.viewHW2;
 
 import OOP.P2.Sem2.data.User;
 

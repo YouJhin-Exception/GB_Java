@@ -1,7 +1,7 @@
-package OOP.P2.HW2.ViewHW2;
+package OOP.P2.HW2.viewHW2;
 
-import OOP.P2.HW2.DataHW2.StudentGroup;
-import OOP.P2.HW2.DataHW2.User;
+import OOP.P2.HW2.dataHW2.StudentGroup;
+import OOP.P2.HW2.dataHW2.User;
 
 import java.util.List;
 

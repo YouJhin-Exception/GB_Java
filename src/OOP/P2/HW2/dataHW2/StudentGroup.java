@@ -1,4 +1,4 @@
-package OOP.P2.HW2.DataHW2;
+package OOP.P2.HW2.dataHW2;
 
 import java.util.List;
 

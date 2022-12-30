@@ -1,7 +1,7 @@
-package OOP.P2.HW2.ControllerHW2;
+package OOP.P2.HW2.controllerHW2;
 
-import OOP.P2.HW2.DataHW2.StudentGroup;
-import OOP.P2.HW2.ServiceHW2.DataService;
+import OOP.P2.HW2.dataHW2.StudentGroup;
+import OOP.P2.HW2.serviceHW2.DataService;
 
 public class Controller {
     private DataService groupService;

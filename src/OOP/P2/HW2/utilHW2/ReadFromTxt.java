@@ -1,7 +1,7 @@
-package OOP.P2.HW2.UtilHW2;
+package OOP.P2.HW2.utilHW2;
 
-import OOP.P2.HW2.DataHW2.Student;
-import OOP.P2.HW2.DataHW2.Teacher;
+import OOP.P2.HW2.dataHW2.Student;
+import OOP.P2.HW2.dataHW2.Teacher;
 
 import java.util.List;
 
