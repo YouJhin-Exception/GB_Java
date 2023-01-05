@@ -1,6 +1,6 @@
-package OOP.P3.Sem3.dataHW2.comparator;
+package OOP.P3.Sem3.data.comparator;
 
-import OOP.P3.Sem3.dataHW2.User;
+import OOP.P3.Sem3.data.User;
 
 import java.util.Comparator;
 

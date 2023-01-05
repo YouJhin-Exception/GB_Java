@@ -1,7 +1,7 @@
-package OOP.P3.Sem3.serviceHW2;
+package OOP.P3.Sem3.service;
 
 
-import OOP.P3.Sem3.dataHW2.StudentGroup;
+import OOP.P3.Sem3.data.StudentGroup;
 
 public interface DataService {
     StudentGroup getGroup(int numb);

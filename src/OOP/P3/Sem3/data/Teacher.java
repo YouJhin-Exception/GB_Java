@@ -1,4 +1,4 @@
-package OOP.P3.Sem3.dataHW2;
+package OOP.P3.Sem3.data;
 
 public class Teacher extends User {
     private String spec;

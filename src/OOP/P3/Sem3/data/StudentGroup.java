@@ -1,4 +1,4 @@
-package OOP.P3.Sem3.dataHW2;
+package OOP.P3.Sem3.data;
 
 import java.util.Iterator;
 import java.util.List;

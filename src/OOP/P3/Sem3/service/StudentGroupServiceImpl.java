@@ -1,11 +1,11 @@
-package OOP.P3.Sem3.serviceHW2;
+package OOP.P3.Sem3.service;
 
 
-import OOP.P3.Sem3.dataHW2.Student;
-import OOP.P3.Sem3.dataHW2.StudentGroup;
-import OOP.P3.Sem3.dataHW2.Teacher;
-import OOP.P3.Sem3.dataHW2.comparator.UserComparator;
-import OOP.P3.Sem3.utilHW2.ReadFromTxt;
+import OOP.P3.Sem3.data.Student;
+import OOP.P3.Sem3.data.StudentGroup;
+import OOP.P3.Sem3.data.Teacher;
+import OOP.P3.Sem3.data.comparator.UserComparator;
+import OOP.P3.Sem3.util.ReadFromTxt;
 
 import java.util.Collections;
 import java.util.Iterator;

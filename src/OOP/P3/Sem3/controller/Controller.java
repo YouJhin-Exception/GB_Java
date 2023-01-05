@@ -1,9 +1,9 @@
-package OOP.P3.Sem3.controllerHW2;
+package OOP.P3.Sem3.controller;
 
 
-import OOP.P3.Sem3.dataHW2.StudentGroup;
-import OOP.P3.Sem3.serviceHW2.DataService;
-import OOP.P3.Sem3.serviceHW2.StudentGroupServiceImpl;
+import OOP.P3.Sem3.data.StudentGroup;
+import OOP.P3.Sem3.service.DataService;
+import OOP.P3.Sem3.service.StudentGroupServiceImpl;
 
 public class Controller {
     private DataService groupService;

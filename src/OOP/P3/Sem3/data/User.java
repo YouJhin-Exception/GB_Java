@@ -1,4 +1,4 @@
-package OOP.P3.Sem3.dataHW2;
+package OOP.P3.Sem3.data;
 
 public abstract class User {
     private String fNmane;

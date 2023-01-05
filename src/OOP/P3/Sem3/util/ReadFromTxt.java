@@ -1,8 +1,8 @@
-package OOP.P3.Sem3.utilHW2;
+package OOP.P3.Sem3.util;
 
 
-import OOP.P3.Sem3.dataHW2.Student;
-import OOP.P3.Sem3.dataHW2.Teacher;
+import OOP.P3.Sem3.data.Student;
+import OOP.P3.Sem3.data.Teacher;
 
 import java.util.List;
 
