@@ -1,4 +1,4 @@
-package OOP.P3.Sem3.data.comparator;
+package OOP.P3.Sem3.data.comparators;
 
 import OOP.P3.Sem3.data.User;
 

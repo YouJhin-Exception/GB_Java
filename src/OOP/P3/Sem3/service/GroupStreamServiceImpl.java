@@ -1,12 +1,12 @@
 package OOP.P3.Sem3.service;
 
 import OOP.P3.Sem3.data.GroupStream;
-import OOP.P3.Sem3.data.comparator.GroupStreamComparator;
-import java.util.Collections;
-import java.util.Comparator;
+import OOP.P3.Sem3.data.comparators.GroupStreamComparator;
+
 import java.util.List;
 
-public class GroupStreamServiceImpl {
+public class GroupStreamServiceImpl implements StreamService {
+    @Override
     public void sortStreamList(List<GroupStream> groupStreamsList) {
         groupStreamsList.sort(new GroupStreamComparator());
     }

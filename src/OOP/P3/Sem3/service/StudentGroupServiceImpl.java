@@ -4,7 +4,7 @@ package OOP.P3.Sem3.service;
 import OOP.P3.Sem3.data.Student;
 import OOP.P3.Sem3.data.StudentGroup;
 import OOP.P3.Sem3.data.Teacher;
-import OOP.P3.Sem3.data.comparator.UserComparator;
+import OOP.P3.Sem3.data.comparators.UserComparator;
 import OOP.P3.Sem3.util.ReadFromTxt;
 
 import java.util.Collections;
@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class StudentGroupServiceImpl {
+public class StudentGroupServiceImpl{
 
     public StudentGroup getGroup() {
         List<Student> students = ReadFromTxt.readStudent();

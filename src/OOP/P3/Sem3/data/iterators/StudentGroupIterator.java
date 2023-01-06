@@ -1,4 +1,7 @@
-package OOP.P3.Sem3.data;
+package OOP.P3.Sem3.data.iterators;
+
+import OOP.P3.Sem3.data.Student;
+import OOP.P3.Sem3.data.StudentGroup;
 
 import java.util.Iterator;
 import java.util.List;
@@ -31,6 +34,7 @@ public class StudentGroupIterator implements Iterator<Student> {
     @Override
     public void remove() {
         this.students.remove(cursor);
+        cursor--;
         //this.iterator.remove();
     }
 }
