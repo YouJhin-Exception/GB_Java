@@ -18,7 +18,7 @@ public class StudentGroupIterator implements Iterator<Student> {
 
     @Override
     public boolean hasNext() {
-        return cursor < students.size();
+        return cursor < students.size() && students.get(cursor) != null; // добавил на 0
         //return this.iterator.hasNext();
     }
 

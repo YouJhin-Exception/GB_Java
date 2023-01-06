@@ -43,7 +43,7 @@ public class StudentGroupServiceImpl {
     }
 
     public void sortFNameStudent(StudentGroup studentGroup) {
-        Collections.sort(studentGroup.getStudentList(), new UserComparator());
+        studentGroup.getStudentList().sort(new UserComparator());
 
     }
 
