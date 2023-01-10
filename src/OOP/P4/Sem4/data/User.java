@@ -1,24 +1,24 @@
 package OOP.P4.Sem4.data;
 
 public abstract class User {
-    private String fNmane;
+    private String fName;
     private String lName;
     private String passport;
     private int brDate;
 
-    public User(String fNmane, String lName, String passport, int brDate) {
-        this.fNmane = fNmane;
+    public User(String fName, String lName, String passport, int brDate) {
+        this.fName = fName;
         this.lName = lName;
         this.passport = passport;
         this.brDate = brDate;
     }
 
     public String getfNmane() {
-        return fNmane;
+        return fName;
     }
 
     public void setfNmane(String fNmane) {
-        this.fNmane = fNmane;
+        this.fName = fNmane;
     }
 
     public String getlName() {

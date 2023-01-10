@@ -1,5 +1,6 @@
-package OOP.P4.Sem4.data;
+package OOP.P4.Sem4.service;
 
+import OOP.P4.Sem4.data.Student;
 import OOP.P4.Sem4.repository.StudentRepository;
 
 public class StudentService {
@@ -9,14 +10,14 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    public void saveStudent(Student student){
-        studentRepository.save(student);
+    public Student saveStudent(Student student){
+        return studentRepository.save(student);
 
     }
     public Student findStudentByLname(String lname){
         return studentRepository.findByLName(lname);
     }
-    public Student findById(int id){
+    public Student findStudentById(int id){
        return studentRepository.findById(id);
     }
 }

@@ -59,8 +59,8 @@ public class StudentGroupServiceImpl {
         return repository.save(studentGroup);
     }
 
-    public StudentGroup findGroup(StudentGroup studentGroup) { //номер группы без инт
-        return repository.findById(studentGroup.getGroupNumb());
+    public StudentGroup findGroup(int id) {
+        return repository.findById(id);
     }
 
 }
