@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class StudentGroupServiceImpl implements Repository<StudentGroup,Integer> {
+public class StudentGroupServiceImpl implements Repository<StudentGroup, Integer> {
 
     private final GroupRepository groupRepository;
 

@@ -3,7 +3,7 @@ package OOP.P4.Sem4.service;
 import OOP.P4.Sem4.data.Student;
 import OOP.P4.Sem4.repository.StudentRepository;
 
-public class StudentService implements DataService<Student,Integer> {
+public class StudentService implements DataService<Student, Integer> {
     private final StudentRepository studentRepository;
 
     public StudentService(StudentRepository studentRepository) {
@@ -31,8 +31,8 @@ public class StudentService implements DataService<Student,Integer> {
     }
 
     @Override
-    public Student findByLname(String Lname) {
-        return studentRepository.findByLName(Lname);
+    public Student findByLastName(String lastName) {
+        return studentRepository.findByLastName(lastName);
     }
 }
 

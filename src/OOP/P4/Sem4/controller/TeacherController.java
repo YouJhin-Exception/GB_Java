@@ -3,7 +3,7 @@ package OOP.P4.Sem4.controller;
 import OOP.P4.Sem4.data.Teacher;
 import OOP.P4.Sem4.service.TeacherService;
 
-public class TeacherController implements UserController<Teacher,Integer>{
+public class TeacherController implements UserController<Teacher, Integer> {
     private final TeacherService teacherService;
 
     public TeacherController(TeacherService teacherService) {
@@ -22,7 +22,7 @@ public class TeacherController implements UserController<Teacher,Integer>{
     }
 
     @Override
-    public Teacher findByLname(String lName) {
-        return teacherService.findByLname(lName);
+    public Teacher findByLastName(String lName) {
+        return teacherService.findByLastName(lName);
     }
 }

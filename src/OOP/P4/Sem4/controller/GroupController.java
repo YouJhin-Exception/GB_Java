@@ -3,7 +3,7 @@ package OOP.P4.Sem4.controller;
 import OOP.P4.Sem4.data.StudentGroup;
 import OOP.P4.Sem4.service.StudentGroupServiceImpl;
 
-public class GroupController implements Controller<StudentGroup,Integer>{
+public class GroupController implements Controller<StudentGroup, Integer> {
     private final StudentGroupServiceImpl studentGroupService;
 
 

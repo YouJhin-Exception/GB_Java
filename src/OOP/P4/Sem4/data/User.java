@@ -1,32 +1,32 @@
 package OOP.P4.Sem4.data;
 
 public abstract class User {
-    private String fName;
-    private String lName;
+    private String firstName;
+    private String lastName;
     private String passport;
     private int brDate;
 
     public User(String fName, String lName, String passport, int brDate) {
-        this.fName = fName;
-        this.lName = lName;
+        this.firstName = fName;
+        this.lastName = lName;
         this.passport = passport;
         this.brDate = brDate;
     }
 
     public String getfNmane() {
-        return fName;
+        return firstName;
     }
 
     public void setfNmane(String fNmane) {
-        this.fName = fNmane;
+        this.firstName = fNmane;
     }
 
     public String getlName() {
-        return lName;
+        return lastName;
     }
 
     public void setlName(String lName) {
-        this.lName = lName;
+        this.lastName = lName;
     }
 
     public String getPassport() {

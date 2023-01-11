@@ -9,6 +9,6 @@ public class GroupStreamComparator implements Comparator<GroupStream> {
     public int compare(GroupStream o1, GroupStream o2) {
         int group1Size = o1.getStudentGroupList().size();
         int group2Size = o2.getStudentGroupList().size();
-        return Integer.compare(group1Size,group2Size);
+        return Integer.compare(group1Size, group2Size);
     }
 }
