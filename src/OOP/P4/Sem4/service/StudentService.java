@@ -3,21 +3,36 @@ package OOP.P4.Sem4.service;
 import OOP.P4.Sem4.data.Student;
 import OOP.P4.Sem4.repository.StudentRepository;
 
-public class StudentService {
+public class StudentService implements DataService<Student,Integer> {
     private final StudentRepository studentRepository;
 
     public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 
-    public Student saveStudent(Student student){
-        return studentRepository.save(student);
+    @Override
+    public Student read(Student student) {
+        return null;
+    }
+
+    @Override
+    public void create(Student student) {
 
     }
-    public Student findStudentByLname(String lname){
-        return studentRepository.findByLName(lname);
+
+    @Override
+    public Student save(Student student) {
+        return studentRepository.save(student);
     }
-    public Student findStudentById(int id){
-       return studentRepository.findById(id);
+
+    @Override
+    public Student findById(Integer id) {
+        return studentRepository.findById(id);
+    }
+
+    @Override
+    public Student findByLname(String Lname) {
+        return studentRepository.findByLName(Lname);
     }
 }
+

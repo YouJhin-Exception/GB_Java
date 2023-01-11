@@ -5,6 +5,7 @@ import OOP.P4.Sem4.data.Student;
 import OOP.P4.Sem4.data.StudentGroup;
 import OOP.P4.Sem4.data.Teacher;
 import OOP.P4.Sem4.data.comparators.UserComparator;
+import OOP.P4.Sem4.repository.GroupRepository;
 import OOP.P4.Sem4.repository.Repository;
 import OOP.P4.Sem4.util.ReadFromTxt;
 
@@ -13,12 +14,12 @@ import java.util.Iterator;
 import java.util.List;
 
 
-public class StudentGroupServiceImpl {
+public class StudentGroupServiceImpl implements Repository<StudentGroup,Integer> {
 
-    private final Repository<StudentGroup, Integer> repository;
+    private final GroupRepository groupRepository;
 
-    public StudentGroupServiceImpl(Repository<StudentGroup, Integer> repository) {
-        this.repository = repository;
+    public StudentGroupServiceImpl(GroupRepository groupRepository) {
+        this.groupRepository = groupRepository;
     }
 
 
@@ -55,12 +56,13 @@ public class StudentGroupServiceImpl {
 
     }
 
-    public StudentGroup saveGroup(StudentGroup studentGroup) {
-        return repository.save(studentGroup);
+    @Override
+    public StudentGroup save(StudentGroup studentGroup) {
+        return groupRepository.save(studentGroup);
     }
 
-    public StudentGroup findGroup(int id) {
-        return repository.findById(id);
+    @Override
+    public StudentGroup findById(Integer id) {
+        return groupRepository.findById(id);
     }
-
 }

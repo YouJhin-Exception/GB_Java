@@ -12,16 +12,16 @@ public class StudentController implements UserController<Student,Integer>{
 
     @Override
     public Student save(Student student) {
-        return studentService.saveStudent(student);
+        return studentService.save(student);
     }
 
     @Override
     public Student findById(Integer id) {
-        return studentService.findStudentById(id);
+        return studentService.findById(id);
     }
 
     @Override
     public Student findByLname(String lName) {
-        return studentService.findStudentByLname(lName);
+        return studentService.findByLname(lName);
     }
 }

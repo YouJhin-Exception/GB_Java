@@ -13,7 +13,7 @@ public class GroupController implements Controller<StudentGroup,Integer>{
 
     @Override
     public StudentGroup save(StudentGroup students) {
-        return studentGroupService.saveGroup(students);
+        return studentGroupService.save(students);
     }
 
     @Override
