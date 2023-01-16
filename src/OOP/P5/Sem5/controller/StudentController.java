@@ -1,12 +1,12 @@
 package OOP.P5.Sem5.controller;
 
 import OOP.P5.Sem5.data.Student;
-import OOP.P5.Sem5.service.StudentUserService;
+import OOP.P5.Sem5.service.StudentService;
 
 public class StudentController implements UserController<Student, Integer> {
-    private final StudentUserService studentService;
+    private final StudentService studentService;
 
-    public StudentController(StudentUserService studentService) {
+    public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
 

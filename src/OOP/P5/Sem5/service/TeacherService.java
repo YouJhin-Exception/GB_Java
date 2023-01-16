@@ -6,10 +6,10 @@ import OOP.P5.Sem5.repository.TeacherRepository;
 
 import java.util.List;
 
-public class TeacherUserService implements DataUserService<Teacher, Integer> {
+public class TeacherService implements DataService<Teacher, Integer> {
     private final TeacherRepository teacherRepository;
 
-    public TeacherUserService(TeacherRepository teacherRepository) {
+    public TeacherService(TeacherRepository teacherRepository) {
         this.teacherRepository = teacherRepository;
     }
 

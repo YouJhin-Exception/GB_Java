@@ -7,10 +7,10 @@ import OOP.P5.Sem5.repository.StudentRepository;
 import java.util.Collections;
 import java.util.List;
 
-public class StudentUserService implements DataUserService<Student, Integer> {
+public class StudentService implements DataService<Student, Integer> {
     private final StudentRepository studentRepository;
 
-    public StudentUserService(StudentRepository studentRepository) {
+    public StudentService(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 

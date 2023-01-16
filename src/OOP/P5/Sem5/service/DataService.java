@@ -3,7 +3,7 @@ package OOP.P5.Sem5.service;
 import OOP.P5.Sem5.data.User;
 
 import java.util.List;
-public interface DataUserService<U extends User, I> {
+public interface DataService<U extends User, I> {
 
     U createUser(U user);
 

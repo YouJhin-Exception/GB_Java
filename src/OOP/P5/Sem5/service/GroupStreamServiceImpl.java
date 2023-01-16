@@ -1,19 +1,17 @@
 package OOP.P5.Sem5.service;
 
 import OOP.P5.Sem5.data.GroupStream;
-import OOP.P5.Sem5.data.StudentGroup;
 import OOP.P5.Sem5.data.comparators.GroupStreamComparator;
-import OOP.P5.Sem5.repository.Repository;
+import OOP.P5.Sem5.repository.GroupStreamRepository;
 
 import java.util.List;
 
 public class GroupStreamServiceImpl implements GroupStreamService {
-    private final Repository<GroupStream, Integer> repository;
+    private final GroupStreamRepository groupStreamRepository;
 
-    public GroupStreamServiceImpl(Repository<GroupStream, Integer> repository) {
-        this.repository = repository;
+    public GroupStreamServiceImpl(GroupStreamRepository groupStreamRepository) {
+        this.groupStreamRepository = groupStreamRepository;
     }
-
 
     @Override
     public void sortStreamList(List<GroupStream> groupStreamsList) {
@@ -21,11 +19,11 @@ public class GroupStreamServiceImpl implements GroupStreamService {
     }
 
     public GroupStream saveGroupStream(GroupStream groupStream) {
-        return repository.save(groupStream);
+        return groupStreamRepository.save(groupStream);
     }
 
     public GroupStream findGroupStreamById(Integer id) {
-        return repository.findById(id);
+        return groupStreamRepository.findById(id);
     }
 }
 

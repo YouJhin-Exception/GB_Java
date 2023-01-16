@@ -1,12 +1,12 @@
 package OOP.P5.Sem5.controller;
 
 import OOP.P5.Sem5.data.Teacher;
-import OOP.P5.Sem5.service.TeacherUserService;
+import OOP.P5.Sem5.service.TeacherService;
 
 public class TeacherController implements UserController<Teacher, Integer> {
-    private final TeacherUserService teacherService;
+    private final TeacherService teacherService;
 
-    public TeacherController(TeacherUserService teacherService) {
+    public TeacherController(TeacherService teacherService) {
         this.teacherService = teacherService;
     }
 
