@@ -4,6 +4,7 @@ package OOP.P5.Sem5.service;
 import OOP.P5.Sem5.data.Student;
 import OOP.P5.Sem5.data.StudentGroup;
 import OOP.P5.Sem5.data.Teacher;
+import OOP.P5.Sem5.repository.Repository;
 import OOP.P5.Sem5.util.ReadFromTxt;
 
 import java.util.Collections;
@@ -11,6 +12,12 @@ import java.util.Iterator;
 import java.util.List;
 
 public class StudentGroupServiceImpl implements StudentGroupService {
+
+    private final Repository<StudentGroup, Integer> repository;
+
+    public StudentGroupServiceImpl(Repository<StudentGroup, Integer> repository) {
+        this.repository = repository;
+    }
 
     @Override
     public StudentGroup getGroup() {
@@ -42,6 +49,14 @@ public class StudentGroupServiceImpl implements StudentGroupService {
     public void sortStudents(StudentGroup studentGroup) {
         Collections.sort(studentGroup.getStudentList());
 
+    }
+
+    public StudentGroup saveGroup(StudentGroup studentGroup) {
+        return repository.save(studentGroup);
+    }
+
+    public StudentGroup findGroupById(Integer id) {
+        return repository.findById(id);
     }
 
 

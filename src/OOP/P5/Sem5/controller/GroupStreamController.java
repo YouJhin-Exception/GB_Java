@@ -13,12 +13,12 @@ public class GroupStreamController implements Controller<GroupStream, Integer> {
 
 
     @Override
-    public GroupStream save(GroupStream studentGroups) {
-        return null;
+    public GroupStream save(GroupStream groupStream) {
+        return groupStreamService.saveGroupStream(groupStream);
     }
 
     @Override
     public GroupStream findById(Integer id) {
-        return null;
+        return groupStreamService.findGroupStreamById(id);
     }
 }

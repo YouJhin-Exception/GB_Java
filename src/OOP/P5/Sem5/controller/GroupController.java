@@ -11,10 +11,9 @@ public class GroupController implements Controller<StudentGroup, Integer> {
         this.studentGroupService = studentGroupService;
     }
 
-
     @Override
     public StudentGroup save(StudentGroup studentGroup) {
-        return null;
+        return studentGroupService.saveGroup(studentGroup);
     }
 
     @Override
