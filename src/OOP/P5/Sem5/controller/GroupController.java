@@ -18,6 +18,6 @@ public class GroupController implements Controller<StudentGroup, Integer> {
 
     @Override
     public StudentGroup findById(Integer id) {
-        return studentGroupService.getGroup(id);
+        return studentGroupService.findGroupById(id);
     }
 }
