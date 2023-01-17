@@ -3,6 +3,9 @@ package OOP.P5.Sem5.data;
 public class Student extends User implements Comparable<Student> {
 
     private String course;
+    public Student(String lastName){
+        super(lastName);
+    }
 
     public Student(String firstName, String lastName, String passport, int brDate, int id, String course) {
         super(firstName, lastName, passport, brDate, id);

@@ -19,6 +19,11 @@ public class TeacherService implements DataService<Teacher, Integer> {
     }
 
     @Override
+    public Teacher deleteUser(Teacher user) {
+        return teacherRepository.delete(user);
+    }
+
+    @Override
     public Teacher findById(Integer id) {
         return teacherRepository.findById(id);
     }

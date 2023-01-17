@@ -10,6 +10,11 @@ public class GroupRepository implements Repository<StudentGroup, Integer> {
     }
 
     @Override
+    public StudentGroup delete(StudentGroup studentGroup) {
+        return null;
+    }
+
+    @Override
     public StudentGroup findById(Integer id) {
         return null;
     }

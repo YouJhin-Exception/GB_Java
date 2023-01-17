@@ -7,6 +7,10 @@ public abstract class User {
     private int brDate;
     private int id;
 
+    public User(String lastName) {
+        this.lastName = lastName;
+    }
+
     public User(String firstName, String lastName, String passport, int brDate, int id) {
         this.firstName = firstName;
         this.lastName = lastName;

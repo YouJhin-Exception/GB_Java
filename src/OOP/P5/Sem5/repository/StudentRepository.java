@@ -9,6 +9,11 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     }
 
     @Override
+    public Student delete(Student student) {
+        return null;
+    }
+
+    @Override
     public Student findById(Integer id) {
         return null;
     }

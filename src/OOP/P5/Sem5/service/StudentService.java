@@ -21,6 +21,11 @@ public class StudentService implements DataService<Student, Integer> {
     }
 
     @Override
+    public Student deleteUser(Student user) {
+        return studentRepository.delete(user);
+    }
+
+    @Override
     public Student findById(Integer id) {
         return studentRepository.findById(id);
     }
