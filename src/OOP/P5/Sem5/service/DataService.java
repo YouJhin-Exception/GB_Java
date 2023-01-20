@@ -18,4 +18,7 @@ public interface DataService<U extends User, I> {
 
     void sortByName(List<U> users);
 
+    U deleteByFirstName(String firstName);
+    U deleteByGroupAndBrsDate(int groupNumber, int brsDate);
+
 }

@@ -43,5 +43,15 @@ public class TeacherService implements DataService<Teacher, Integer> {
         users.sort(new UserComparator());
     }
 
+    @Override
+    public Teacher deleteByFirstName(String firstName) {
+        return null;
+    }
+
+    @Override
+    public Teacher deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
+        return null;
+    }
+
 
 }

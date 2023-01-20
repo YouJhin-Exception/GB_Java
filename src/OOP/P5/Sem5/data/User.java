@@ -7,8 +7,11 @@ public abstract class User {
     private int brDate;
     private int id;
 
-    public User(String lastName) {
-        this.lastName = lastName;
+    //    public User(String lastName) {
+//        this.lastName = lastName;
+//    }
+    public User(String firstName) {
+        this.firstName = firstName;
     }
 
     public User(String firstName, String lastName, String passport, int brDate, int id) {
@@ -57,5 +60,10 @@ public abstract class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", brDate=" + brDate + ", id=" + id + '}';
     }
 }

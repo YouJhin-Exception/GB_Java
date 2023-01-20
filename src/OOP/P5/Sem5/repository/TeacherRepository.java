@@ -23,4 +23,14 @@ public class TeacherRepository implements UserRepository<Teacher, Integer> {
     public Teacher findByLastName(String lastName) {
         return null;
     }
+
+    @Override
+    public Teacher deleteByFirstName(String firstName) {
+        return null;
+    }
+
+    @Override
+    public Teacher deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
+        return null;
+    }
 }

@@ -45,6 +45,16 @@ public class StudentService implements DataService<Student, Integer> {
         users.sort(new UserComparator());
     }
 
+    @Override
+    public Student deleteByFirstName(String firstName) {
+        return studentRepository.deleteByFirstName(firstName);
+    }
+
+    @Override
+    public Student deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
+        return studentRepository.deleteByGroupAndBrsDate(groupNumber, brsDate);
+    }
+
 
 }
 

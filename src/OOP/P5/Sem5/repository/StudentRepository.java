@@ -22,4 +22,14 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     public Student findByLastName(String lastName) {
         return null;
     }
+
+    public Student deleteByFirstName(String firstName) {
+        return null;
+    }
+
+    @Override
+    public Student deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
+        return null;
+    }
+
 }
