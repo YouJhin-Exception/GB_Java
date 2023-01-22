@@ -12,7 +12,7 @@ public class Student extends User implements Comparable<Student> {
         super(firstName);
     }
 
-    public Student(String firstName, String lastName, String passport, int brDate, int id, String course, int groupNumber) {
+    public Student(String firstName, String lastName, String passport, String brDate, int id, String course, int groupNumber) {
         super(firstName, lastName, passport, brDate, id);
         this.course = course;
         this.groupNumber = groupNumber;
@@ -26,12 +26,24 @@ public class Student extends User implements Comparable<Student> {
         this.course = course;
     }
 
+    public int getGroupNumber() {
+        return groupNumber;
+    }
+
+    public void setGroupNumber(int groupNumber) {
+        this.groupNumber = groupNumber;
+    }
+
     @Override
     public int compareTo(Student o) {
-        return Integer.compare(o.getBrDate(), this.getBrDate());
+        return CharSequence.compare(o.getBrDate(), this.getBrDate());
         //if (o.getBrDate() > this.getBrDate()) return 1;
         //if (o.getBrDate() < this.getBrDate()) return -1;
         //return 0;
     }
 
+    @Override
+    public String toString() {
+        return "Student-" + super.toString() + " course = " + course + ", groupNumber = " + groupNumber + '}';
+    }
 }

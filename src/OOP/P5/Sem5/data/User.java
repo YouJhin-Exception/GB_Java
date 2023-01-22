@@ -4,7 +4,7 @@ public abstract class User {
     private String firstName;
     private String lastName;
     private String passport;
-    private int brDate;
+    private String brDate;
     private int id;
 
     //    public User(String lastName) {
@@ -14,7 +14,7 @@ public abstract class User {
         this.firstName = firstName;
     }
 
-    public User(String firstName, String lastName, String passport, int brDate, int id) {
+    public User(String firstName, String lastName, String passport, String brDate, int id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.passport = passport;
@@ -46,11 +46,11 @@ public abstract class User {
         this.passport = passport;
     }
 
-    public int getBrDate() {
+    public String getBrDate() {
         return brDate;
     }
 
-    public void setBrDate(int brDate) {
+    public void setBrDate(String brDate) {
         this.brDate = brDate;
     }
 
@@ -64,6 +64,6 @@ public abstract class User {
 
     @Override
     public String toString() {
-        return "User{" + "firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", brDate=" + brDate + ", id=" + id + '}';
+        return "{firstName = "+getFirstName() +", lastName = "+ getLastName() + ", Birth Date = " + getBrDate() + ", Passport = " + getPassport() + ", id=" + getId()+"}";
     }
 }

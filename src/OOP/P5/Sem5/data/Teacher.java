@@ -6,7 +6,7 @@ public class Teacher extends User {
     private String cafedra;
     private List<Integer> groups;
 
-    public Teacher(String firstName, String lastName, String passport, int brDate, int id, String cafedra, List<Integer> groups) {
+    public Teacher(String firstName, String lastName, String passport, String brDate, int id, String cafedra, List<Integer> groups) {
         super(firstName, lastName, passport, brDate, id);
         this.cafedra = cafedra;
         this.groups = groups;
@@ -27,5 +27,10 @@ public class Teacher extends User {
 
     public void setGroups(List<Integer> groups) {
         this.groups = groups;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher-" + super.toString() + " cafedra = " + cafedra + ", groups = " + groups + '}';
     }
 }
