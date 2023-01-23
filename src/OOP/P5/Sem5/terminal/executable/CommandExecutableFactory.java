@@ -5,8 +5,8 @@ import OOP.P5.Sem5.service.StudentService;
 import OOP.P5.Sem5.view.TerminalView.CmdView;
 
 public class CommandExecutableFactory {
-    StudentService studentService;
-    CmdView cmdView;
+   private StudentService studentService;
+   private CmdView cmdView;
 
     // String firstName, String lastName, String passport, int brDate, int id, String course, int groupNumber
     public CommandExecutable create(String[] input) {

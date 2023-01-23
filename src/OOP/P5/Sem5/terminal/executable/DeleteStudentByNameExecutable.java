@@ -5,8 +5,8 @@ import OOP.P5.Sem5.service.StudentService;
 
 public class DeleteStudentByNameExecutable implements CommandExecutable {
 
-    private StudentService studentService;
-    private String firsName;
+    private final StudentService studentService;
+    private final String firsName;
 
     public DeleteStudentByNameExecutable(StudentService studentService, String firsName) {
         this.studentService = studentService;

@@ -4,8 +4,8 @@ import OOP.P5.Sem5.service.StudentService;
 
 public class DeleteStudentByNumberGroupAndBrsDate implements CommandExecutable {
     StudentService studentService;
-    int groupNumber;
-    int brsDate;
+    private final int groupNumber;
+    private final int brsDate;
 
     public DeleteStudentByNumberGroupAndBrsDate(StudentService studentService, int groupNumber, int brsDate) {
         this.studentService = studentService;

@@ -8,9 +8,11 @@ import java.util.Scanner;
 public class TerminalReader {
     private static TerminalReader terminalReader;
     private final CommandParser commandParser;
+    private CommandExecutableFactory commandExecutableFactory;
 
     public TerminalReader(CommandParser commandParser) {
         this.commandParser = commandParser;
+
     }
 
     public static TerminalReader getInstance(CommandParser commandParser1) {
@@ -20,12 +22,11 @@ public class TerminalReader {
         return terminalReader;
     }
 
-    public void getI(int f) {
+    public void runReader(int f) {
         Scanner inCommand = new Scanner(System.in);
         while (true) {
             String commandLine = inCommand.nextLine();
             String[] inParseCommand = commandParser.parseCommand(commandLine);
-            CommandExecutableFactory commandExecutableFactory = new CommandExecutableFactory();
             CommandExecutable commandExecutable = commandExecutableFactory.create(inParseCommand);
             commandExecutable.execute();
         }
