@@ -8,27 +8,27 @@ import java.util.Scanner;
 public class TerminalReader {
     private static TerminalReader terminalReader;
     private final CommandParser commandParser;
-    private CommandExecutableFactory commandExecutableFactory;
+    private final CommandExecutableFactory commandExecutableFactory;
 
-    public TerminalReader(CommandParser commandParser) {
+    public TerminalReader(CommandParser commandParser, CommandExecutableFactory commandExecutableFactory) {
         this.commandParser = commandParser;
-
+        this.commandExecutableFactory = commandExecutableFactory;
     }
 
-    public static TerminalReader getInstance(CommandParser commandParser1) {
+    public static TerminalReader getInstance(CommandParser commandParser1, CommandExecutableFactory commandExecutableFactory1) {
         if (terminalReader == null) {
-            terminalReader = new TerminalReader(commandParser1);
+            terminalReader = new TerminalReader(commandParser1, commandExecutableFactory1);
         }
         return terminalReader;
     }
 
-    public void runReader(int f) {
+    public void runReader(int f) { // нах ф?
         Scanner inCommand = new Scanner(System.in);
         while (true) {
             String commandLine = inCommand.nextLine();
-            String[] inParseCommand = commandParser.parseCommand(commandLine);
-            CommandExecutable commandExecutable = commandExecutableFactory.create(inParseCommand);
-            commandExecutable.execute();
+            Command inParseCommand = commandParser.parseCommand(commandLine);
+            CommandExecutable commandExecutable = commandExecutableFactory.create(inParseCommand); // сократить до =
+            commandExecutable.execute();// нужен ?
         }
     }
 
