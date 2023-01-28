@@ -15,7 +15,10 @@ public class CommandExecutableFactoryImpl implements CommandExecutableFactory {
             return new CreateStudentExecutable(new StudentService(new StudentRepository()), new Student(input.getFirstArgument()));
         } else if (input.isDeleteCommand()) {
             return new DeleteStudentExecutable(new StudentService(new StudentRepository()), new Student(input.getFirstArgument()));
+        }else if (input.isCreateFullCommand()){
+            return new CreateStudentExecutable(new StudentService(new StudentRepository()),new Student(input)); // подумать над фабрикой которая будет собирать студента из 7 инпутов
         }
+
 
         return null;
     }

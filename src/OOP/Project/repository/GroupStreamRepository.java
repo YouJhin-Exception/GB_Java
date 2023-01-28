@@ -2,7 +2,7 @@ package OOP.Project.repository;
 
 import OOP.Project.data.GroupStream;
 
-public class GroupStreamRepository implements Repository<GroupStream,Integer>{
+public class GroupStreamRepository implements Repository<GroupStream, Integer> {
     @Override
     public GroupStream save(GroupStream groupStream) {
         return null;

@@ -2,15 +2,14 @@ package OOP.Project.controller;
 
 
 import OOP.Project.data.GroupStream;
-import OOP.Project.service.GroupStreamServiceImpl;
+import OOP.Project.service.GroupStreamService;
 
 public class GroupStreamController implements Controller<GroupStream, Integer> {
-    private final GroupStreamServiceImpl groupStreamService;
+    private final GroupStreamService<GroupStream, Integer> groupStreamService;
 
-    public GroupStreamController(GroupStreamServiceImpl groupStreamService) {
+    public GroupStreamController(GroupStreamService<GroupStream, Integer> groupStreamService) {
         this.groupStreamService = groupStreamService;
     }
-
 
     @Override
     public GroupStream save(GroupStream groupStream) {

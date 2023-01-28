@@ -6,7 +6,7 @@ import OOP.Project.repository.Repository;
 
 import java.util.List;
 
-public class GroupStreamServiceImpl implements GroupStreamService<GroupStream, Integer> {
+public class GroupStreamServiceImpl implements GroupStreamService<GroupStream, Integer>,DataStreamSortService<GroupStream> {
     private final Repository<GroupStream, Integer> groupStreamRepository;
 
     public GroupStreamServiceImpl(Repository<GroupStream, Integer> groupStreamRepository) {

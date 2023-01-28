@@ -7,7 +7,7 @@ public abstract class User {
     private String brDate;
     private int id;
 
-    //    public User(String lastName) {
+//    public User(String lastName) {
 //        this.lastName = lastName;
 //    }
     public User(String firstName) {
@@ -64,6 +64,6 @@ public abstract class User {
 
     @Override
     public String toString() {
-        return "{firstName = "+getFirstName() +", lastName = "+ getLastName() + ", Birth Date = " + getBrDate() + ", Passport = " + getPassport() + ", id=" + getId()+"}";
+        return "{firstName = " + getFirstName() + ", lastName = " + getLastName() + ", Birth Date = " + getBrDate() + ", Passport = " + getPassport() + ", id=" + getId() + "}";
     }
 }

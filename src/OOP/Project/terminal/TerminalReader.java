@@ -6,7 +6,7 @@ import OOP.Project.terminal.executable.CommandExecutableFactory;
 import java.util.Scanner;
 
 public class TerminalReader {
-    private static TerminalReader terminalReader;
+    private static TerminalReader terminalReader; //для синглтона
     private final CommandParser commandParser;
     private final CommandExecutableFactory commandExecutableFactory;
 

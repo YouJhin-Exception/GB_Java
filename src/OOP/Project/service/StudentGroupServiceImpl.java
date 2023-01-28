@@ -11,13 +11,13 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class StudentGroupServiceImpl implements StudentGroupService {
-
-    private final Repository<StudentGroup, Integer> repository;
+public class StudentGroupServiceImpl implements StudentGroupService<StudentGroup, Integer>, DataGroupSortService<StudentGroup> {
+    private final Repository<StudentGroup, Integer> groupRepository;
 
     public StudentGroupServiceImpl(Repository<StudentGroup, Integer> repository) {
-        this.repository = repository;
+        this.groupRepository = repository;
     }
+
 
     @Override
     public StudentGroup getGroup() {
@@ -44,21 +44,29 @@ public class StudentGroupServiceImpl implements StudentGroupService {
             }
         }
     }
-         // за имплячь сорт
 
-//    @Override
-//    public void sortStudents(StudentGroup studentGroup) {
-//        Collections.sort(studentGroup.getStudentList());
-//
-//    }
+    @Override
+    public void sortUsers(StudentGroup students) {
+        Collections.sort(students.getStudentList());
+    }
 
+    @Override
+    public void sortByName(StudentGroup students) {
+        System.out.println("нет реализации");
+    }
+
+    @Override
     public StudentGroup saveGroup(StudentGroup studentGroup) {
-        return repository.save(studentGroup);
+        return groupRepository.save(studentGroup);
     }
 
+    @Override
     public StudentGroup findGroupById(Integer id) {
-        return repository.findById(id);
+        return groupRepository.findById(id);
     }
 
-
+    @Override
+    public void deleteGroup(StudentGroup students) {
+        groupRepository.delete(students);
+    }
 }

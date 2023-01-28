@@ -2,19 +2,17 @@ package OOP.Project.controller;
 
 import OOP.Project.data.StudentGroup;
 import OOP.Project.service.StudentGroupService;
-import OOP.Project.service.StudentGroupServiceImpl;
 
 public class GroupController implements Controller<StudentGroup, Integer> {
-    private final StudentGroupService studentGroupService;
+    private final StudentGroupService<StudentGroup, Integer> studentGroupService;
 
-
-    public GroupController(StudentGroupServiceImpl studentGroupService) {
+    public GroupController(StudentGroupService<StudentGroup, Integer> studentGroupService) {
         this.studentGroupService = studentGroupService;
     }
 
     @Override
     public StudentGroup save(StudentGroup studentGroup) {
-        return studentGroupService(studentGroup);
+        return studentGroupService.saveGroup(studentGroup);
     }
 
     @Override

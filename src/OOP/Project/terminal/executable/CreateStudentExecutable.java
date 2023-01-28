@@ -1,19 +1,20 @@
 package OOP.Project.terminal.executable;
 
 import OOP.Project.data.Student;
-import OOP.Project.service.StudentService;
+import OOP.Project.data.User;
+import OOP.Project.service.UserService;
 
 public class CreateStudentExecutable implements CommandExecutable {
-    private final StudentService studentService;
-    private final Student student;
+    private final UserService<Student,Integer> studentService;
+    private final User student; // заменить на комманд
 
-    public CreateStudentExecutable(StudentService studentService, Student student) {
+    public CreateStudentExecutable(UserService<Student,Integer> studentService, User student) {
         this.studentService = studentService;
         this.student = student;
     }
 
     @Override
     public void execute() {
-        studentService.createUser(student);
+        studentService.createUser((Student) student); // тоже изменить
     }
 }
