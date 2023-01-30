@@ -1,10 +1,18 @@
 package OOP.Project.repository;
 
 import OOP.Project.data.Student;
+import OOP.Project.db.StudentTable;
 
 public class StudentRepository implements UserRepository<Student, Integer> {
+    private final StudentTable studentTable;
+
+    public StudentRepository(StudentTable studentTable) {
+        this.studentTable = studentTable;
+    }
+
     @Override
     public Student save(Student student) {
+        studentTable.save(student);
         return null;
     }
 
@@ -28,7 +36,7 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     }
 
     public Student deleteByFirstName(String firstName) {
-        return null;
+        return studentTable.removeByFirstName(firstName);  // void
     }
 
     @Override

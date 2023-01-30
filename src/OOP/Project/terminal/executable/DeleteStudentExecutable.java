@@ -2,12 +2,13 @@ package OOP.Project.terminal.executable;
 
 import OOP.Project.data.Student;
 import OOP.Project.service.StudentService;
+import OOP.Project.service.UserService;
 
 public class DeleteStudentExecutable implements CommandExecutable {
-    private final StudentService studentService;
-    private final Student student;
+    private final UserService<Student,Integer> studentService;
+    private final Student student; // zamenit
 
-    public DeleteStudentExecutable(StudentService studentService, Student student) {
+    public DeleteStudentExecutable(UserService<Student, Integer> studentService, Student student) {
         this.studentService = studentService;
         this.student = student;
     }

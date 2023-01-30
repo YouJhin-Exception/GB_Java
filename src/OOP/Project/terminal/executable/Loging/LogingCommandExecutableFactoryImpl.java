@@ -6,6 +6,10 @@ import OOP.Project.terminal.executable.CommandExecutableFactoryImpl;
 
 public class LogingCommandExecutableFactoryImpl extends CommandExecutableFactoryImpl {
 
+    public LogingCommandExecutableFactoryImpl() {
+        super(studentService);
+    }
+
     @Override
     public CommandExecutable create(Command input) {
         System.out.println(input);
