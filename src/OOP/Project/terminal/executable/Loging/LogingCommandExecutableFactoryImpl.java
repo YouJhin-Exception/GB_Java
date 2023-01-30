@@ -1,14 +1,19 @@
 package OOP.Project.terminal.executable.Loging;
 
+import OOP.Project.data.Student;
+import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
 import OOP.Project.terminal.executable.CommandExecutable;
 import OOP.Project.terminal.executable.CommandExecutableFactoryImpl;
 
 public class LogingCommandExecutableFactoryImpl extends CommandExecutableFactoryImpl {
 
-    public LogingCommandExecutableFactoryImpl() {
+    //private static final UserService<Student, Integer> studentService;
+
+    public LogingCommandExecutableFactoryImpl(UserService<Student, Integer> studentService) {
         super(studentService);
     }
+
 
     @Override
     public CommandExecutable create(Command input) {

@@ -30,19 +30,15 @@ public class StudentService implements UserService<Student, Integer> {
         return studentRepository.findByLastName(lastName);
     }
 
-//
-//
-//
-//
-//
-//    @Override
-//    public Student deleteByFirstName(String firstName) {
-//        return studentRepository.deleteByFirstName(firstName);
-//    }
-//
-//    @Override
-//    public Student deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
-//        return studentRepository.deleteByGroupAndBrsDate(groupNumber, brsDate);
+    @Override
+    public void deleteByFirstName(String firstName) {
+        studentRepository.deleteByFirstName(firstName);
+    }
+
+    @Override
+    public Student deleteByGroupAndBrsDate(Integer groupNumber, Integer brsDate) {
+        return studentRepository.deleteByGroupAndBrsDate(groupNumber, brsDate);
+    }
 }
 
 

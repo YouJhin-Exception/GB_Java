@@ -9,8 +9,14 @@ public class Command {
     private static final String DEL_BY_NAME = "del_fn";
     private static final String DEL_BY_GROUP_AND_DATE = "del_gd";
 
-    private List<String> arguments;
-    private String inCommand;
+    private final List<String> arguments;
+    private final String inCommand;
+
+    public Command(List<String> arguments, String inCommand) {
+        this.arguments = arguments;
+        this.inCommand = inCommand;
+    }
+
 
     public String getFirstArgument() {
         return arguments.get(0);  // отделить - мтд

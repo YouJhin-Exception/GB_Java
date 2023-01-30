@@ -22,13 +22,14 @@ public class TerminalReader {
         return terminalReader;
     }
 
-    public void runReader(int f) { // нах ф?
+    public void runReader() {
         Scanner inCommand = new Scanner(System.in);
         while (true) {
             String commandLine = inCommand.nextLine();
+            if (commandLine.equals("exit")) break;
             Command inParseCommand = commandParser.parseCommand(commandLine);
             CommandExecutable commandExecutable = commandExecutableFactory.create(inParseCommand); // сократить до =
-            commandExecutable.execute();// нужен ?
+            commandExecutable.execute();
         }
     }
 

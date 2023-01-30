@@ -10,4 +10,8 @@ public interface UserService<U extends User, I> {
     U findByIdUser(I id);
 
     U findByLastNameUser(String lastName);
+
+    void deleteByFirstName(String firstName);
+
+    U deleteByGroupAndBrsDate(I groupNumber,I brsDate);
 }

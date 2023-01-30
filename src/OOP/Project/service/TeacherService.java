@@ -30,15 +30,13 @@ public class TeacherService implements UserService<Teacher, Integer> {
         return teacherRepository.findByLastName(lastName);
     }
 
-//    @Override
-//    public Teacher deleteByFirstName(String firstName) {
-//        return null;
-//    }
-//
-//    @Override
-//    public Teacher deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
-//        return null;
-//    }
+    @Override
+    public void deleteByFirstName(String firstName) {
 
+    }
 
+    @Override
+    public Teacher deleteByGroupAndBrsDate(Integer groupNumber, Integer brsDate) {
+        return null;
+    }
 }

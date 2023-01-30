@@ -9,7 +9,7 @@ public abstract class Table<E extends User> {
     protected final List<E> elements;
 
     protected Table() {
-        this.elements = new ArrayList<>();
+        elements = new ArrayList<>();
     }
 
     public E save(E entity) {

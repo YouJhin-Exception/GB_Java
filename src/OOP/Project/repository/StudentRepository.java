@@ -13,7 +13,7 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     @Override
     public Student save(Student student) {
         studentTable.save(student);
-        return null;
+        return student;
     }
 
     @Override
@@ -36,7 +36,7 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     }
 
     public Student deleteByFirstName(String firstName) {
-        return studentTable.removeByFirstName(firstName);  // void
+        return studentTable.removeByFirstName(firstName);  // void ?
     }
 
     @Override

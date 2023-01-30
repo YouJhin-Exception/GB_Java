@@ -1,13 +1,14 @@
 package OOP.Project.terminal.executable;
 
-import OOP.Project.service.StudentService;
+import OOP.Project.data.Student;
+import OOP.Project.service.UserService;
 
 public class DeleteStudentByNameExecutable implements CommandExecutable {
 
-    private final StudentService studentService;
+    private final UserService<Student, Integer> studentService;
     private final String firsName;
 
-    public DeleteStudentByNameExecutable(StudentService studentService, String firsName) {
+    public DeleteStudentByNameExecutable(UserService<Student, Integer> studentService, String firsName) {
         this.studentService = studentService;
         this.firsName = firsName;
     }
