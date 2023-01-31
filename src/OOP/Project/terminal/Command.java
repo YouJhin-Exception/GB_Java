@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Command {
     private static final String ADD_BY_NAME = "ad_fn";
-    private static final String ADD_COMMAND = "add+";
+    private static final String ADD_COMMAND = "add";
     private static final String DEL_COMMAND = "del";
     private static final String DEL_BY_NAME = "del_fn";
     private static final String DEL_BY_GROUP_AND_DATE = "del_gd";
@@ -45,7 +45,6 @@ public class Command {
     public String getSeventhArgument() {
         return arguments.get(6);
     }
-
 
     public boolean isCreateCommand() {
         return inCommand.equals(ADD_BY_NAME);

@@ -10,8 +10,8 @@ public class LogingCommandExecutableFactoryImpl extends CommandExecutableFactory
 
     //private static final UserService<Student, Integer> studentService;
 
-    public LogingCommandExecutableFactoryImpl(UserService<Student, Integer> studentService) {
-        super(studentService);
+    public LogingCommandExecutableFactoryImpl() {
+        super();
     }
 
 

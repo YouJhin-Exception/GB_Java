@@ -9,4 +9,6 @@ public interface CommandView<U extends User> {
 
     void unknown();
 
+    void startDescription();
+
 }

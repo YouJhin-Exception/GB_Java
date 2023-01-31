@@ -3,20 +3,21 @@ package OOP.Project.terminal.executable;
 import OOP.Project.data.Student;
 import OOP.Project.service.StudentService;
 import OOP.Project.service.UserService;
+import OOP.Project.terminal.Command;
 
 public class DeleteStudentByNumberGroupAndBrsDate implements CommandExecutable {
     private final UserService<Student,Integer> studentService;
-    private final int groupNumber;
-    private final int brsDate;
+    private final Command command;
 
-    public DeleteStudentByNumberGroupAndBrsDate(UserService<Student, Integer> studentService, int groupNumber, int brsDate) {
-        this.studentService = studentService;
-        this.groupNumber = groupNumber;
-        this.brsDate = brsDate;
+
+    public DeleteStudentByNumberGroupAndBrsDate(Command command) {
+        this.studentService = new StudentService();
+        this.command = command;
     }
 
     @Override
     public void execute() {
-        studentService.deleteByGroupAndBrsDate(groupNumber,brsDate);
+        studentService.deleteByGroupAndBrsDate(Integer.parseInt(command.getSeventhArgument()),command.getFourthArgument());
+        // print output
     }
 }

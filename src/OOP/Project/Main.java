@@ -1,7 +1,9 @@
 package OOP.Project;
 
+import OOP.Project.terminal.TerminalReader;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("ОНО Живое!!!");
+        TerminalReader.getInstance().runReader();
     }
 }

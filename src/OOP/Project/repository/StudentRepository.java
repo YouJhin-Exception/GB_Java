@@ -6,8 +6,8 @@ import OOP.Project.db.StudentTable;
 public class StudentRepository implements UserRepository<Student, Integer> {
     private final StudentTable studentTable;
 
-    public StudentRepository(StudentTable studentTable) {
-        this.studentTable = studentTable;
+    public StudentRepository() {
+        this.studentTable = new StudentTable();
     }
 
     @Override
@@ -35,13 +35,12 @@ public class StudentRepository implements UserRepository<Student, Integer> {
         return null;
     }
 
-    public Student deleteByFirstName(String firstName) {
-        return studentTable.removeByFirstName(firstName);  // void ?
+    public void deleteByFirstName(String firstName) {
+        studentTable.removeByFirstName(firstName);
     }
 
     @Override
-    public Student deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
-        return null;
+    public Student deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
+        return null; // метод из табле
     }
-
 }

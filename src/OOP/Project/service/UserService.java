@@ -13,5 +13,5 @@ public interface UserService<U extends User, I> {
 
     void deleteByFirstName(String firstName);
 
-    U deleteByGroupAndBrsDate(I groupNumber,I brsDate);
+    void deleteByGroupAndBrsDate(int groupNumber, String brsDate); // костыль !!
 }

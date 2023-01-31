@@ -7,9 +7,15 @@ public class StudentTable extends Table<Student> {
         super();
     }
 
-    public Student removeByFirstName(String firstName){
-        Student delStud = new Student(firstName);
+    public void removeByFirstName(String firstName) {
         elements.removeIf(s -> s.getFirstName().equals(firstName));
-        return delStud; // костыльные костыли, подумать....
     }
+
+//    public void remove(Student student){
+//        //elements.remove(student);
+//    }
+
+//    public void removeByGroupAndBrsDate(int group, String brDate){
+//        elements.removeIf()  - реализация логики удаления
+//    }
 }

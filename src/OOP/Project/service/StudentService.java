@@ -1,13 +1,14 @@
 package OOP.Project.service;
 
 import OOP.Project.data.Student;
+import OOP.Project.repository.StudentRepository;
 import OOP.Project.repository.UserRepository;
 
 public class StudentService implements UserService<Student, Integer> {
     private final UserRepository<Student, Integer> studentRepository;
 
-    public StudentService(UserRepository<Student, Integer> studentRepository) {
-        this.studentRepository = studentRepository;
+    public StudentService() {
+        this.studentRepository = new StudentRepository();
     }
 
     @Override
@@ -36,8 +37,8 @@ public class StudentService implements UserService<Student, Integer> {
     }
 
     @Override
-    public Student deleteByGroupAndBrsDate(Integer groupNumber, Integer brsDate) {
-        return studentRepository.deleteByGroupAndBrsDate(groupNumber, brsDate);
+    public void deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
+        studentRepository.deleteByGroupAndBrsDate(groupNumber,brsDate);
     }
 }
 

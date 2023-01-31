@@ -29,12 +29,11 @@ public class TeacherRepository implements UserRepository<Teacher, Integer> {
     }
 
     @Override
-    public Teacher deleteByFirstName(String firstName) {
-        return null;
+    public void deleteByFirstName(String firstName) {
     }
 
     @Override
-    public Teacher deleteByGroupAndBrsDate(int groupNumber, int brsDate) {
+    public Teacher deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
         return null;
     }
 }

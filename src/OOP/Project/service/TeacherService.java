@@ -36,7 +36,7 @@ public class TeacherService implements UserService<Teacher, Integer> {
     }
 
     @Override
-    public Teacher deleteByGroupAndBrsDate(Integer groupNumber, Integer brsDate) {
-        return null;
+    public void deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
+
     }
 }
