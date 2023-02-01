@@ -1,8 +1,10 @@
 package OOP.Project.terminal.executable;
 
+import OOP.Project.data.User;
+import OOP.Project.db.Table;
 import OOP.Project.terminal.Command;
 
-public class CommandExecutableFactoryImpl implements CommandExecutableFactory {
+public class CommandExecutableFactoryImpl extends Table<User> implements CommandExecutableFactory {
 
     @Override
     public CommandExecutable create(Command input) {

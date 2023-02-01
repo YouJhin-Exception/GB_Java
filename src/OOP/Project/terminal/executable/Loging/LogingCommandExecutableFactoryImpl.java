@@ -1,7 +1,5 @@
 package OOP.Project.terminal.executable.Loging;
 
-import OOP.Project.data.Student;
-import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
 import OOP.Project.terminal.executable.CommandExecutable;
 import OOP.Project.terminal.executable.CommandExecutableFactoryImpl;

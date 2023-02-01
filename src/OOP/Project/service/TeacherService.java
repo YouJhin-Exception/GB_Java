@@ -3,10 +3,10 @@ package OOP.Project.service;
 import OOP.Project.data.Teacher;
 import OOP.Project.repository.UserRepository;
 
-public class TeacherService implements UserService<Teacher, Integer> {
-    private final UserRepository<Teacher, Integer> teacherRepository;
+public class TeacherService implements UserService<Teacher, String> {
+    private final UserRepository<Teacher, String> teacherRepository;
 
-    public TeacherService(UserRepository<Teacher, Integer> teacherRepository) {
+    public TeacherService(UserRepository<Teacher, String> teacherRepository) {
         this.teacherRepository = teacherRepository;
     }
 
@@ -21,7 +21,7 @@ public class TeacherService implements UserService<Teacher, Integer> {
     }
 
     @Override
-    public Teacher findByIdUser(Integer id) {
+    public Teacher findByIdUser(String id) {
         return teacherRepository.findById(id);
     }
 
@@ -36,7 +36,12 @@ public class TeacherService implements UserService<Teacher, Integer> {
     }
 
     @Override
-    public void deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
+    public void deleteByGroupAndBrsDate(String groupNumber, String brsDate) {
+
+    }
+
+    @Override
+    public void createByName(String firstName) {
 
     }
 }

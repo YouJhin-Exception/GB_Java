@@ -3,12 +3,12 @@ package OOP.Project.repository;
 import OOP.Project.data.User;
 
 public interface UserRepository<E extends User, I> extends Repository<E, I> {
-    E createByUserName(String firstName);
+    E createByUserName(I firstName); // void ?
 
-    E findByLastName(String lastName);
+    E findByLastName(I lastName);
 
-    void deleteByFirstName(String firstName); // void ?
+    void deleteByFirstName(I firstName);
 
-    E deleteByGroupAndBrsDate(int groupNumber, String brsDate);
+    void deleteByGroupAndBrsDate(I groupNumber, I brsDate);
 
 }

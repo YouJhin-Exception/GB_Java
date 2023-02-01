@@ -4,11 +4,10 @@ import OOP.Project.data.Student;
 import OOP.Project.service.StudentService;
 import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
+import OOP.Project.view.TerminalView.CmdView;
 
-import java.util.concurrent.ConcurrentMap;
-
-public class DeleteStudentExecutable implements CommandExecutable {
-    private final UserService<Student,Integer> studentService;
+public class DeleteStudentExecutable extends CmdView implements CommandExecutable {
+    private final UserService<Student, String> studentService;
     private final Command command;
 
     public DeleteStudentExecutable(Command command) {
@@ -18,6 +17,7 @@ public class DeleteStudentExecutable implements CommandExecutable {
 
     @Override
     public void execute() {    // уместно ли здесь new ????
-        studentService.deleteUser(new Student("Удаляемый"));   // проверить
+        studentService.deleteUser(new Student("Удаляемый")); //??
+        viewExeCommand(command);// проверить
     }
 }

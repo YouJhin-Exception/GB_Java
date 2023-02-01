@@ -3,7 +3,7 @@ package OOP.Project.repository;
 import OOP.Project.data.Student;
 import OOP.Project.db.StudentTable;
 
-public class StudentRepository implements UserRepository<Student, Integer> {
+public class StudentRepository implements UserRepository<Student, String> {
     private final StudentTable studentTable;
 
     public StudentRepository() {
@@ -13,7 +13,7 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     @Override
     public Student save(Student student) {
         studentTable.save(student);
-        return student;
+        return student;  // void ?
     }
 
     @Override
@@ -21,13 +21,13 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     }
 
     @Override
-    public Student findById(Integer id) {
+    public Student findById(String id) {
         return null;
     }
 
     @Override
     public Student createByUserName(String firstName) {
-        return null;
+        return studentTable.save(new Student(firstName));
     }
 
     @Override
@@ -40,7 +40,6 @@ public class StudentRepository implements UserRepository<Student, Integer> {
     }
 
     @Override
-    public Student deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
-        return null; // метод из табле
+    public void deleteByGroupAndBrsDate(String groupNumber, String brsDate) {
     }
 }

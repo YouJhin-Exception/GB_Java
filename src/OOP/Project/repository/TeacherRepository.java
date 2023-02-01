@@ -3,7 +3,7 @@ package OOP.Project.repository;
 
 import OOP.Project.data.Teacher;
 
-public class TeacherRepository implements UserRepository<Teacher, Integer> {
+public class TeacherRepository implements UserRepository<Teacher, String> {
     @Override
     public Teacher save(Teacher teacher) {
         return null;
@@ -14,7 +14,7 @@ public class TeacherRepository implements UserRepository<Teacher, Integer> {
     }
 
     @Override
-    public Teacher findById(Integer id) {
+    public Teacher findById(String id) {
         return null;
     }
 
@@ -33,7 +33,6 @@ public class TeacherRepository implements UserRepository<Teacher, Integer> {
     }
 
     @Override
-    public Teacher deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
-        return null;
+    public void deleteByGroupAndBrsDate(String groupNumber, String brsDate) {
     }
 }

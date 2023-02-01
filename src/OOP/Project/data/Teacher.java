@@ -6,12 +6,11 @@ public class Teacher extends User {
     private String cafedra;
     private List<Integer> groups;
 
-    public Teacher(String firstName, String lastName, String passport, String brDate, int id, String cafedra, List<Integer> groups) {
+    public Teacher(String firstName, String lastName, String passport, String brDate, String id, String cafedra, List<Integer> groups) {
         super(firstName, lastName, passport, brDate, id);
         this.cafedra = cafedra;
         this.groups = groups;
     }
-
 
     public String getCafedra() {
         return cafedra;

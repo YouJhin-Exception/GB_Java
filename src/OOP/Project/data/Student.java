@@ -3,7 +3,7 @@ package OOP.Project.data;
 public class Student extends User implements Comparable<Student> {
 
     private String course;
-    private int groupNumber;
+    private String groupNumber;
 //    public Student(String lastName) {
 //        super(lastName);
 //    }
@@ -12,7 +12,7 @@ public class Student extends User implements Comparable<Student> {
         super(firstName);
     }
 
-    public Student(String firstName, String lastName, String passport, String brDate, int id, String course, int groupNumber) {
+    public Student(String firstName, String lastName, String passport, String brDate, String id, String course, String groupNumber) {
         super(firstName, lastName, passport, brDate, id);
         this.course = course;
         this.groupNumber = groupNumber;
@@ -26,11 +26,11 @@ public class Student extends User implements Comparable<Student> {
         this.course = course;
     }
 
-    public int getGroupNumber() {
+    public String getGroupNumber() {
         return groupNumber;
     }
 
-    public void setGroupNumber(int groupNumber) {
+    public void setGroupNumber(String groupNumber) {
         this.groupNumber = groupNumber;
     }
 

@@ -4,8 +4,12 @@ import OOP.Project.data.Student;
 import OOP.Project.repository.StudentRepository;
 import OOP.Project.repository.UserRepository;
 
-public class StudentService implements UserService<Student, Integer> {
-    private final UserRepository<Student, Integer> studentRepository;
+public class StudentService implements UserService<Student, String> {
+    private final UserRepository<Student, String> studentRepository;
+
+    public StudentService(UserRepository<Student, String> studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
     public StudentService() {
         this.studentRepository = new StudentRepository();
@@ -22,7 +26,7 @@ public class StudentService implements UserService<Student, Integer> {
     }
 
     @Override
-    public Student findByIdUser(Integer id) {
+    public Student findByIdUser(String id) {
         return studentRepository.findById(id);
     }
 
@@ -37,8 +41,13 @@ public class StudentService implements UserService<Student, Integer> {
     }
 
     @Override
-    public void deleteByGroupAndBrsDate(int groupNumber, String brsDate) {
-        studentRepository.deleteByGroupAndBrsDate(groupNumber,brsDate);
+    public void deleteByGroupAndBrsDate(String groupNumber, String brsDate) {
+        studentRepository.deleteByGroupAndBrsDate(groupNumber, brsDate);
+    }
+
+    @Override
+    public void createByName(String firstName) {
+        studentRepository.createByUserName(firstName);
     }
 }
 

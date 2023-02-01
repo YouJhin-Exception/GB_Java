@@ -5,16 +5,16 @@ public abstract class User {
     private String lastName;
     private String passport;
     private String brDate;
-    private int id;
+    private String id;
 
-//    public User(String lastName) {
+    //    public User(String lastName) {
 //        this.lastName = lastName;
 //    }
     public User(String firstName) {
         this.firstName = firstName;
     }
 
-    public User(String firstName, String lastName, String passport, String brDate, int id) {
+    public User(String firstName, String lastName, String passport, String brDate, String id) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.passport = passport;
@@ -54,16 +54,16 @@ public abstract class User {
         this.brDate = brDate;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     @Override
     public String toString() {
-        return "{firstName = " + getFirstName() + ", lastName = " + getLastName() + ", Birth Date = " + getBrDate() + ", Passport = " + getPassport() + ", id=" + getId() + "}";
+        return "{firstName = " + getFirstName() + ", lastName = " + getLastName() + ", Birth Date = " + getBrDate() + ", Passport = " + getPassport() + ", id =" + getId();
     }
 }

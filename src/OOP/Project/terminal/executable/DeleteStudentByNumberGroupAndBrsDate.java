@@ -4,9 +4,10 @@ import OOP.Project.data.Student;
 import OOP.Project.service.StudentService;
 import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
+import OOP.Project.view.TerminalView.CmdView;
 
-public class DeleteStudentByNumberGroupAndBrsDate implements CommandExecutable {
-    private final UserService<Student,Integer> studentService;
+public class DeleteStudentByNumberGroupAndBrsDate extends CmdView implements CommandExecutable {
+    private final UserService<Student, String> studentService;
     private final Command command;
 
 
@@ -17,7 +18,7 @@ public class DeleteStudentByNumberGroupAndBrsDate implements CommandExecutable {
 
     @Override
     public void execute() {
-        studentService.deleteByGroupAndBrsDate(Integer.parseInt(command.getSeventhArgument()),command.getFourthArgument());
-        // print output
+        studentService.deleteByGroupAndBrsDate(command.getSeventhArgument(), command.getFourthArgument());
+        viewExeCommand(command);
     }
 }

@@ -6,14 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Table<E extends User> {
-    protected final List<E> elements;
+    protected List<E> elements;
 
     protected Table() {
-        elements = new ArrayList<>();
+        this.elements = new ArrayList<>();
     }
 
     public E save(E entity) {
-        elements.add(entity);
+        this.elements.add(entity);
+        System.out.println(elements);
         return entity;
     }
 }

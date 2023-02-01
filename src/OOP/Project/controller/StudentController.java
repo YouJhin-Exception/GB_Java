@@ -3,10 +3,10 @@ package OOP.Project.controller;
 import OOP.Project.data.Student;
 import OOP.Project.service.UserService;
 
-public class StudentController implements UserController<Student, Integer> {
-    private final UserService<Student, Integer> studentService;
+public class StudentController implements UserController<Student, String> {
+    private final UserService<Student, String> studentService;
 
-    public StudentController(UserService<Student, Integer> studentService) {
+    public StudentController(UserService<Student, String> studentService) {
         this.studentService = studentService;
     }
 
@@ -16,7 +16,7 @@ public class StudentController implements UserController<Student, Integer> {
     }
 
     @Override
-    public Student findById(Integer id) {
+    public Student findById(String id) {
         return studentService.findByIdUser(id);
     }
 

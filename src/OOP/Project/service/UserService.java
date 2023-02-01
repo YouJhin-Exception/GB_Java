@@ -9,9 +9,12 @@ public interface UserService<U extends User, I> {
 
     U findByIdUser(I id);
 
-    U findByLastNameUser(String lastName);
+    U findByLastNameUser(I lastName);
 
-    void deleteByFirstName(String firstName);
+    void deleteByFirstName(I firstName);
 
-    void deleteByGroupAndBrsDate(int groupNumber, String brsDate); // костыль !!
+    void deleteByGroupAndBrsDate(I groupNumber, I brsDate);
+
+    void createByName(I firstName);
 }
+

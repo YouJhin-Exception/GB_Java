@@ -15,7 +15,7 @@ public class StudentTable extends Table<Student> {
 //        //elements.remove(student);
 //    }
 
-//    public void removeByGroupAndBrsDate(int group, String brDate){
+//    public void removeByGroupAndBrsDate(String group, String brDate){
 //        elements.removeIf()  - реализация логики удаления
 //    }
 }

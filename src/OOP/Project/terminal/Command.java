@@ -8,7 +8,6 @@ public class Command {
     private static final String DEL_COMMAND = "del";
     private static final String DEL_BY_NAME = "del_fn";
     private static final String DEL_BY_GROUP_AND_DATE = "del_gd";
-
     private final List<String> arguments;
     private final String inCommand;
 
@@ -17,6 +16,13 @@ public class Command {
         this.inCommand = inCommand;
     }
 
+    public String getInCommand() {
+        return inCommand;
+    }
+
+    public List<String> getArguments() {
+        return arguments;
+    }
 
     public String getFirstArgument() {
         return arguments.get(0);  // отделить - мтд
@@ -68,9 +74,6 @@ public class Command {
 
     @Override
     public String toString() {
-        return "Command{" +
-                "arguments=" + arguments +
-                ", firstCommand='" + inCommand + '\'' +
-                '}';
+        return "Command{" + "arguments=" + arguments + ", firstCommand='" + inCommand + '\'' + '}';
     }
 }

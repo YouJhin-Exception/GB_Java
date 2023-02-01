@@ -6,8 +6,8 @@ import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
 import OOP.Project.view.TerminalView.CmdView;
 
-public class CreateStudentExecutable implements CommandExecutable {
-    private final UserService<Student, Integer> studentService;
+public class CreateStudentExecutable extends CmdView implements CommandExecutable {
+    private final UserService<Student, String> studentService;
     private final Command command;
 
     public CreateStudentExecutable(Command command) {
@@ -16,17 +16,17 @@ public class CreateStudentExecutable implements CommandExecutable {
         this.command = command;
     }
 
-    // String firstName, String lastName, String passport, String brDate, int id, String course, int groupNumber
+    // String firstName, String lastName, String passport, String brDate, String id, String course, String groupNumber
     @Override
     public void execute() {
         studentService.createUser(new Student(command.getFirstArgument(),
                 command.getSecondArgument(),
                 command.getThirdArgument(),
                 command.getFourthArgument(),
-                Integer.parseInt(command.getFifthArgument()),
+                command.getFifthArgument(),
                 command.getSixthArgument(),
-                Integer.parseInt(command.getSeventhArgument())));
+                command.getSeventhArgument()));
 
-        // можно добавить отображение команды
+        viewExeCommand(command);
     }
 }
