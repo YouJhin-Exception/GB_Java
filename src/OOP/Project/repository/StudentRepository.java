@@ -18,6 +18,7 @@ public class StudentRepository implements UserRepository<Student, String> {
 
     @Override
     public void delete(Student student) {
+        studentTable.remove(student);
     }
 
     @Override
@@ -41,5 +42,6 @@ public class StudentRepository implements UserRepository<Student, String> {
 
     @Override
     public void deleteByGroupAndBrsDate(String groupNumber, String brsDate) {
+        studentTable.removeByGroupAndBrsDate(groupNumber, brsDate);
     }
 }

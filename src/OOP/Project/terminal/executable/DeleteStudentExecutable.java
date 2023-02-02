@@ -11,13 +11,19 @@ public class DeleteStudentExecutable extends CmdView implements CommandExecutabl
     private final Command command;
 
     public DeleteStudentExecutable(Command command) {
-        this.studentService = new StudentService();  // without super !
+        this.studentService = new StudentService();
         this.command = command;
     }
 
     @Override
-    public void execute() {    // уместно ли здесь new ????
-        studentService.deleteUser(new Student("Удаляемый")); //??
-        viewExeCommand(command);// проверить
+    public void execute() {
+        studentService.deleteUser(new Student(command.getFirstArgument(),
+                command.getSecondArgument(),
+                command.getThirdArgument(),
+                command.getFourthArgument(),
+                command.getFifthArgument(),
+                command.getSixthArgument(),
+                command.getSeventhArgument()));
+        viewExeCommand(command);
     }
 }

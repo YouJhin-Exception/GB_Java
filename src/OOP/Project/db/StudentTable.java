@@ -11,11 +11,11 @@ public class StudentTable extends Table<Student> {
         elements.removeIf(s -> s.getFirstName().equals(firstName));
     }
 
-//    public void remove(Student student){
-//        //elements.remove(student);
-//    }
+    public void remove(Student student) {
+        elements.remove(student);
+    }
 
-//    public void removeByGroupAndBrsDate(String group, String brDate){
-//        elements.removeIf()  - реализация логики удаления
-//    }
+    public void removeByGroupAndBrsDate(String group, String brDate) {
+        elements.removeIf(g -> g.getGroupNumber().equals(group) & g.getBrDate().equals(brDate));
+    }
 }

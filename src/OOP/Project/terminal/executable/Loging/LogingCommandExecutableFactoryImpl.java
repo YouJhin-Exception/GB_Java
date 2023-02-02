@@ -3,22 +3,22 @@ package OOP.Project.terminal.executable.Loging;
 import OOP.Project.terminal.Command;
 import OOP.Project.terminal.executable.CommandExecutable;
 import OOP.Project.terminal.executable.CommandExecutableFactoryImpl;
+import OOP.Project.view.TerminalView.LoggingCmdView;
+import OOP.Project.view.TerminalView.LoggingView;
 
 public class LogingCommandExecutableFactoryImpl extends CommandExecutableFactoryImpl {
-
-    //private static final UserService<Student, Integer> studentService;
+    private final LoggingView<Command> commandLoggingView;
 
     public LogingCommandExecutableFactoryImpl() {
-        super();
+        commandLoggingView = new LoggingCmdView();
     }
 
 
     @Override
     public CommandExecutable create(Command input) {
-        System.out.println(input);
+        commandLoggingView.startLogging(input);
         CommandExecutable result = super.create(input);
-        System.out.println("MyBrain"); // toString переопределить можно
-        // реализовать лог с смд
+        commandLoggingView.endLogging();
         return result;
     }
 }

@@ -3,6 +3,7 @@ package OOP.Project.terminal;
 import OOP.Project.terminal.executable.CommandExecutable;
 import OOP.Project.terminal.executable.CommandExecutableFactory;
 import OOP.Project.terminal.executable.CommandExecutableFactoryImpl;
+import OOP.Project.terminal.executable.Loging.LogingCommandExecutableFactoryImpl;
 import OOP.Project.view.TerminalView.CmdView;
 
 import java.util.Scanner;
@@ -14,7 +15,7 @@ public class TerminalReader extends CmdView {
 
     public TerminalReader() {
         this.commandParser = new CommandParserImpl();
-        this.commandExecutableFactory = new CommandExecutableFactoryImpl(); // переделать на loging IMPL
+        this.commandExecutableFactory = new LogingCommandExecutableFactoryImpl(); // переделать на loging IMPL
     }
 
     public static TerminalReader getInstance() {
@@ -25,7 +26,7 @@ public class TerminalReader extends CmdView {
     }
 
     public void runReader() {
-        startDescription(); // изменить
+        startDescription();
         Scanner inCommand = new Scanner(System.in);
         while (true) {
             String commandLine = inCommand.nextLine();

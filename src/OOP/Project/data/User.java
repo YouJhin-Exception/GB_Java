@@ -64,6 +64,6 @@ public abstract class User {
 
     @Override
     public String toString() {
-        return "{firstName = " + getFirstName() + ", lastName = " + getLastName() + ", Birth Date = " + getBrDate() + ", Passport = " + getPassport() + ", id =" + getId();
+        return "{firstName = " + getFirstName() + ", lastName = " + getLastName() + ", Birth Date = " + getBrDate() + ", Passport = " + getPassport() + ", id =" + getId()+",";
     }
 }

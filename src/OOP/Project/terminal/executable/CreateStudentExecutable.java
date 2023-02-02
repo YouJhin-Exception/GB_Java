@@ -11,7 +11,6 @@ public class CreateStudentExecutable extends CmdView implements CommandExecutabl
     private final Command command;
 
     public CreateStudentExecutable(Command command) {
-        super(); // nax ????
         this.studentService = new StudentService();
         this.command = command;
     }
