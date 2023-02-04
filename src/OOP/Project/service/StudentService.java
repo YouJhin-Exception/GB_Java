@@ -7,10 +7,6 @@ import OOP.Project.repository.UserRepository;
 public class StudentService implements UserService<Student, String> {
     private final UserRepository<Student, String> studentRepository;
 
-    public StudentService(UserRepository<Student, String> studentRepository) {
-        this.studentRepository = studentRepository;
-    }
-
     public StudentService() {
         this.studentRepository = new StudentRepository();
     }

@@ -32,6 +32,6 @@ public class CmdView implements CommandView<Command> {
                 ad_fn - Добавление по имени
                 add - Полное добавление по конструктору(String firstName, String lastName, String passport, String brDate, String id, String course, String groupNumber)
                 del_fn - Удаление по имени
-                Разделитель - ,\s""");
+                Разделитель - пробел\s""");
     }
 }

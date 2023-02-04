@@ -24,32 +24,8 @@ public class Command {
         return arguments;
     }
 
-    public String getFirstArgument() {
-        return arguments.get(0);  // отделить - мтд
-    }
-
-    public String getSecondArgument() {
-        return arguments.get(1);
-    }
-
-    public String getThirdArgument() {
-        return arguments.get(2);
-    }
-
-    public String getFourthArgument() {
-        return arguments.get(3);
-    }
-
-    public String getFifthArgument() {
-        return arguments.get(4);
-    }
-
-    public String getSixthArgument() {
-        return arguments.get(5);
-    }
-
-    public String getSeventhArgument() {
-        return arguments.get(6);
+    public String getArgument(int index) {
+        return arguments.get(index);
     }
 
     public boolean isCreateCommand() {

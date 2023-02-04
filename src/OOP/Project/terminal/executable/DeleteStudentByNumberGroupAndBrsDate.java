@@ -18,7 +18,7 @@ public class DeleteStudentByNumberGroupAndBrsDate extends CmdView implements Com
 
     @Override
     public void execute() {
-        studentService.deleteByGroupAndBrsDate(command.getSeventhArgument(), command.getFourthArgument());
+        studentService.deleteByGroupAndBrsDate(command.getArgument(6), command.getArgument(3));
         viewExeCommand(command);
     }
 }

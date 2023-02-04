@@ -18,7 +18,7 @@ public class DeleteStudentByNameExecutable extends CmdView implements CommandExe
 
     @Override
     public void execute() {
-        studentService.deleteByFirstName(command.getFirstArgument());
+        studentService.deleteByFirstName(command.getArgument(0));
         viewExeCommand(command);
 
     }
