@@ -19,8 +19,7 @@ public class TeacherRepository implements UserRepository<Teacher, String> {
     }
 
     @Override
-    public Teacher createByUserName(String firstName) {
-        return null;
+    public void createByUserName(String firstName) {
     }
 
     @Override

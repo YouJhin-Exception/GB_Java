@@ -17,4 +17,9 @@ public abstract class Table<E extends User> {
         System.out.println(elements);
         return entity;
     }
+
+    public List<E> getElements() {
+
+        return elements;
+    }
 }

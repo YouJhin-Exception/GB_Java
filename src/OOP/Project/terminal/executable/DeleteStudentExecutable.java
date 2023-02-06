@@ -1,29 +1,37 @@
 package OOP.Project.terminal.executable;
 
 import OOP.Project.data.Student;
-import OOP.Project.service.StudentService;
 import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
-import OOP.Project.view.TerminalView.CmdView;
 
-public class DeleteStudentExecutable extends CmdView implements CommandExecutable {
+public class DeleteStudentExecutable extends AbstractCommandExecutable {
+
+    //для протокола... бесполезный класс на данном этапе
+
+    private static final String DESCRIPTION = "Команда для удаления студента по полному конструктору ";
     private final UserService<Student, String> studentService;
-    private final Command command;
+    private final Student student;
 
-    public DeleteStudentExecutable(Command command) {
-        this.studentService = new StudentService();
-        this.command = command;
-    }
 
-    @Override
-    public void execute() {
-        studentService.deleteUser(new Student(command.getArgument(0),
+    public DeleteStudentExecutable(UserService<Student, String> studentService, Command command) {
+        this.studentService = studentService;
+        this.student = new Student(command.getArgument(0),
                 command.getArgument(1),
                 command.getArgument(2),
                 command.getArgument(3),
                 command.getArgument(4),
                 command.getArgument(5),
-                command.getArgument(6)));
-        viewExeCommand(command);
+                command.getArgument(6));
+    }
+
+    @Override
+    public CommandResult execute() {
+        studentService.deleteUser(student);
+        return createResult(true);
+    }
+
+    @Override
+    protected String getDescription() {
+        return DESCRIPTION + student.toString() + " ";
     }
 }

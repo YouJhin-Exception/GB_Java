@@ -27,8 +27,8 @@ public class StudentRepository implements UserRepository<Student, String> {
     }
 
     @Override
-    public Student createByUserName(String firstName) {
-        return studentTable.save(new Student(firstName));
+    public void createByUserName(String firstName) {
+        studentTable.save(new Student(firstName));
     }
 
     @Override
@@ -41,7 +41,7 @@ public class StudentRepository implements UserRepository<Student, String> {
     }
 
     @Override
-    public void deleteByGroupAndBrsDate(String groupNumber, String brsDate) {
-        studentTable.removeByGroupAndBrsDate(groupNumber, brsDate);
+    public void deleteByGroupAndBrsDate(String brsDate, String groupNumber) {
+        studentTable.removeByGroupAndBrsDate(brsDate, groupNumber);
     }
 }

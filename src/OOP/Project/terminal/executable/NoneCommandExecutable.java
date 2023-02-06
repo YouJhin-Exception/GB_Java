@@ -1,8 +1,15 @@
 package OOP.Project.terminal.executable;
 
-public class NoneCommandExecutable implements CommandExecutable {
+public class NoneCommandExecutable extends AbstractCommandExecutable {
+    private static final String DESCRIPTION = "Неизвестная команда ";
+
     @Override
-    public void execute() {
-        System.out.println("Неизвестная команда - используйте -> ad_fn, add, del_fn,");
+    public CommandResult execute() {
+        return new CommandResult(getDescription());
+    }
+
+    @Override
+    protected String getDescription() {
+        return DESCRIPTION;
     }
 }

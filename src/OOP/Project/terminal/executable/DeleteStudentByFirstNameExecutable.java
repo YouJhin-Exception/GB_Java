@@ -4,19 +4,22 @@ import OOP.Project.data.Student;
 import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
 
-public class CreateStudentByNameExecutable extends AbstractCommandExecutable {
-    private static final String DESCRIPTION = "Команда для создания студента по имени -> ";
+public class DeleteStudentByFirstNameExecutable extends AbstractCommandExecutable {
+    private static final String DESCRIPTION = "Команда для удаления студента по фамилии ";
+
     private final UserService<Student, String> studentService;
     private final String firstName;
 
-    public CreateStudentByNameExecutable(Command command, UserService<Student, String> studentService) {
+
+    public DeleteStudentByFirstNameExecutable(UserService<Student, String> studentService, Command command) {
         this.studentService = studentService;
-        this.firstName = command.getArgument(0);
+        this.firstName = command.getArguments().get(0);
+
     }
 
     @Override
     public CommandResult execute() {
-        studentService.createByName(firstName);
+        studentService.deleteByFirstName(firstName);
         return createResult(true);
     }
 

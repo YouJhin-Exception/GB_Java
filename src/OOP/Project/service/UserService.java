@@ -13,7 +13,7 @@ public interface UserService<U extends User, I> {
 
     void deleteByFirstName(I firstName);
 
-    void deleteByGroupAndBrsDate(I groupNumber, I brsDate);
+    void deleteByGroupAndBrsDate(I brsDate, I groupNumber);
 
     void createByName(I firstName);
 }

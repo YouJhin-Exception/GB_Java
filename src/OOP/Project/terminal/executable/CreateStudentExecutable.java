@@ -1,31 +1,35 @@
 package OOP.Project.terminal.executable;
 
 import OOP.Project.data.Student;
-import OOP.Project.service.StudentService;
 import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
-import OOP.Project.view.TerminalView.CmdView;
 
-public class CreateStudentExecutable extends CmdView implements CommandExecutable {
+public class CreateStudentExecutable extends AbstractCommandExecutable {
+    private static final String DESCRIPTION = "Команда для создания студента ";
+
     private final UserService<Student, String> studentService;
-    private final Command command;
+    private final Student student;
 
-    public CreateStudentExecutable(Command command) {
-        this.studentService = new StudentService();
-        this.command = command;
-    }
-
-    // String firstName, String lastName, String passport, String brDate, String id, String course, String groupNumber
-    @Override
-    public void execute() {
-        studentService.createUser(new Student(command.getArgument(0),
+    public CreateStudentExecutable(UserService<Student, String> studentService, Command command) {
+        this.studentService = studentService;
+        this.student = new Student(command.getArgument(0),
                 command.getArgument(1),
                 command.getArgument(2),
                 command.getArgument(3),
                 command.getArgument(4),
                 command.getArgument(5),
-                command.getArgument(6)));
+                command.getArgument(6));
+    }
 
-        viewExeCommand(command);
+    // String firstName, String lastName, String passport, String brDate, String id, String course, String groupNumber
+    @Override
+    public CommandResult execute() {
+        studentService.createUser(student);
+        return createResult(true);
+    }
+
+    @Override
+    protected String getDescription() {
+        return DESCRIPTION + student.toString() + " ";
     }
 }

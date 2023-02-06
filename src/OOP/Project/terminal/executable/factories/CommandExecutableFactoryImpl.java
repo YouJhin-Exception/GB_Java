@@ -1,12 +1,11 @@
-package OOP.Project.terminal.executable;
+package OOP.Project.terminal.executable.factories;
 
 import OOP.Project.data.Student;
-import OOP.Project.data.User;
-import OOP.Project.db.Table;
 import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
+import OOP.Project.terminal.executable.*;
 
-public class CommandExecutableFactoryImpl extends Table<User> implements CommandExecutableFactory {
+public class CommandExecutableFactoryImpl implements CommandExecutableFactory {
 
     private final UserService<Student, String> studentService;
 
@@ -18,15 +17,14 @@ public class CommandExecutableFactoryImpl extends Table<User> implements Command
     public CommandExecutable create(Command input) {
 
         if (input.isCreateFullCommand()) {
-            return new CreateStudentExecutable(input);
+            return new CreateStudentExecutable(studentService,input);
         } else if (input.isDeleteCommand()) {
-            return new DeleteStudentExecutable(input);
+            return new DeleteStudentExecutable(studentService,input);
         } else if (input.isDelByNameCommand()) {
-            return new DeleteStudentByNameExecutable(input);
+            return new DeleteStudentByFirstNameExecutable(studentService,input);
         } else if (input.isDelByGroupAndDateCommand()) {
-            return new DeleteStudentByNumberGroupAndBrsDate(input);
+            return new DeleteStudentByNumberGroupAndBrsDate(input,studentService);
         } else if (input.isCreateCommand()) {
-
             return new CreateStudentByNameExecutable(input,studentService);
         }
         return new NoneCommandExecutable();

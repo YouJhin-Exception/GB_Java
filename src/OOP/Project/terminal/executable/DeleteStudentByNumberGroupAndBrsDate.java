@@ -1,24 +1,30 @@
 package OOP.Project.terminal.executable;
 
 import OOP.Project.data.Student;
-import OOP.Project.service.StudentService;
 import OOP.Project.service.UserService;
 import OOP.Project.terminal.Command;
-import OOP.Project.view.TerminalView.CmdView;
 
-public class DeleteStudentByNumberGroupAndBrsDate extends CmdView implements CommandExecutable {
+public class DeleteStudentByNumberGroupAndBrsDate extends AbstractCommandExecutable {
+    private static final String DESCRIPTION = "Команда для удаления студента по возрасту и номеру группы ";
     private final UserService<Student, String> studentService;
-    private final Command command;
+    private final String brDate;
+    private final String groupNumber;
 
 
-    public DeleteStudentByNumberGroupAndBrsDate(Command command) {
-        this.studentService = new StudentService();
-        this.command = command;
+    public DeleteStudentByNumberGroupAndBrsDate(Command command, UserService<Student, String> studentService) {
+        this.studentService = studentService;
+        this.brDate = command.getArguments().get(0);
+        this.groupNumber = command.getArguments().get(1);
     }
 
     @Override
-    public void execute() {
-        studentService.deleteByGroupAndBrsDate(command.getArgument(6), command.getArgument(3));
-        viewExeCommand(command);
+    public CommandResult execute() {
+        studentService.deleteByGroupAndBrsDate(brDate, groupNumber);
+        return createResult(true);
+    }
+
+    @Override
+    protected String getDescription() {
+        return DESCRIPTION + "Br Date -> " + brDate +" Group Number -> "+groupNumber+" ";
     }
 }
